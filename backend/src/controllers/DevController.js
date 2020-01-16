@@ -37,8 +37,9 @@ module.exports = {
        
         return response.json(dev);
     },
-    async update() {
-
+    async update(request, response) {
+        const devs = await Dev.find();
+        return response.json(devs);
     },
     async destroy() {
 
